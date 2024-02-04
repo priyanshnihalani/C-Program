@@ -12,7 +12,7 @@ class Indexer{
             word[flag] = value;
         }
     }
-    public string this[double flag]
+    public string this[string nm, int flag]
     {
         get{
             string temp = word[flag];
@@ -27,7 +27,7 @@ class Program{
     static void Main(){
         Indexer indexer = new Indexer();
         indexer[0] = "Hello";
-        indexer[1.0] = "World";
-        Console.WriteLine("$ Integer args {indexer[0]} and Double args {indexer[1.0]}");
+        indexer["Hello1" ,1] = "World";
+        Console.WriteLine(indexer[0] + " " + indexer["Hello1", 1]);
     }
 }
